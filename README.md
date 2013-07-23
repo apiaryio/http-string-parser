@@ -18,6 +18,23 @@ console.log(message['request']);
 console.log(message['response']);
 ```
 
+See more about [Request][request] and [Response][response] data model.
+
+[request]: https://www.relishapp.com/apiary/gavel/docs/data-model#http-request
+[response]: https://www.relishapp.com/apiary/gavel/docs/data-model#http-response
+
+## API Reference
+
+`parseRequest(requestString)`
+
+`parseRequestLine(requestLine)`
+
+`parseResponse(responseString)`
+
+`parseStatusLine(statusLine)`
+
+`praseHeaders(headersLinesArray)`
+
 - - - 
 
-NOTE: Proof of concept, naive HTTP parsing. In future may be replaced with better parser from Node.JS core's C bindings of NGINX Http parser
+NOTE: Proof of concept, naive HTTP parsing, wheel re-inventation. In future it may be replaced with better parser from [Node.JS core's C bindings of NGINX HTTP parser](https://github.com/joyent/http-parser)
