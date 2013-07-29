@@ -36,4 +36,5 @@ See more about [Request][request] and [Response][response] data model.
 
 - - - 
 
-NOTE: Proof of concept, naive HTTP parsing, wheel re-inventation. In future it may be replaced with better parser from [Node.JS core's C bindings of NGINX HTTP parser](https://github.com/joyent/http-parser)
+NOTE: Proof of concept, naive HTTP parsing, wheel re-inventation. In future it may be replaced with better parser from [Node.JS core's C bindings of NGINX HTTP parser](https://github.com/joyent/http-parser) or [PEG.js HTTP parser](https://npmjs.org/package/http-pegjs)
+
