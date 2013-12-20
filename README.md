@@ -32,7 +32,7 @@ See more about [Request][request] and [Response][response] data model.
 
 `parseStatusLine(statusLine)`
 
-`praseHeaders(headersLinesArray)`
+`parseHeaders(headersLinesArray)`
 
 - - - 
 
