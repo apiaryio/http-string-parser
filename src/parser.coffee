@@ -5,37 +5,37 @@ parseRequest = (requestString) ->
   parsedRequestLine = parseRequestLine lines.shift()
   request['method'] = parsedRequestLine['method']
   request['uri'] = parsedRequestLine['uri']
-  
+
   #TODO refactor this part to be tested
   headerLines = []
   while lines.length > 0
     line = lines.shift()
     break if line == ""
     headerLines.push line
-  
+
   request['headers'] = parseHeaders headerLines
   request['body'] = lines.join '\r\n'
-  
+
   request
 
 parseResponse = (responseString) ->
   response = {}
   lines = responseString.split('\r\n')
-  
+
   parsedStatusLine = parseStatusLine lines.shift()
   response['statusCode'] = parsedStatusLine['statusCode']
   response['statusMessage'] = parsedStatusLine['statusMessage']
-  
+
   #TODO refactor this part to be tested
   headerLines = []
   while lines.length > 0
     line = lines.shift()
     break if line == ""
     headerLines.push line
-  
+
   response['headers'] = parseHeaders headerLines
   response['body'] = lines.join '\r\n'
-  
+
   response
 
 parseHeaders = (headerLines) ->
@@ -48,15 +48,16 @@ parseHeaders = (headerLines) ->
   headers
 
 parseStatusLine = (statusLine) ->
-  parts = statusLine.split ' '
+  parts = statusLine.match /^(.+) ([0-9]{3}) (.*)$/
   parsed = {}
 
-  parsed['protocol'] = parts[0]
-  parsed['statusCode'] = parts[1]
-  parsed['statusMessage'] = parts[2]
+  if parts isnt null
+    parsed['protocol'] = parts[1]
+    parsed['statusCode'] = parts[2]
+    parsed['statusMessage'] = parts[3]
 
   parsed
-  
+
 parseRequestLine = (requestLineString) ->
   parts = requestLineString.split(' ')
   parsed = {}
