@@ -23,6 +23,7 @@ parseResponse = (responseString) ->
   lines = responseString.split('\r\n')
 
   parsedStatusLine = parseStatusLine lines.shift()
+  response['protocolVersion'] = parsedStatusLine['protocol']
   response['statusCode'] = parsedStatusLine['statusCode']
   response['statusMessage'] = parsedStatusLine['statusMessage']
 
