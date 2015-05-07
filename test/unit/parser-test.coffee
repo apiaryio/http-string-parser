@@ -175,9 +175,18 @@ describe "parser module", () ->
       before () ->
         output = parser.parseResponse(responseString)
 
-      ['statusCode', 'statusMessage', 'headers', 'body'].forEach (key) ->
+      ['protocolVersion', 'statusCode', 'statusMessage', 'headers', 'body'].forEach (key) ->
         it 'should have key "'+ key + '"', () ->
           assert.include Object.keys(output), key
+
+      describe "protocolVersion", () ->
+        subject = ""
+
+        before () ->
+          subject = output['protocolVersion']
+
+        it 'should contain "HTTP/1.1"', () ->
+          assert.equal subject, "HTTP/1.1"
 
       describe "statusCode", () ->
         subject = ""
