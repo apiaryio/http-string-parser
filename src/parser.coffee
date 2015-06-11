@@ -1,6 +1,6 @@
 parseRequest = (requestString) ->
   request = {}
-  lines = requestString.replace(/\r/, '').split('\n')
+  lines = requestString.replace(/\r/g, '').split('\n')
 
   parsedRequestLine = parseRequestLine lines.shift()
   request['method'] = parsedRequestLine['method']
@@ -20,7 +20,7 @@ parseRequest = (requestString) ->
 
 parseResponse = (responseString) ->
   response = {}
-  lines = responseString.replace(/\r/, '').split('\n')
+  lines = responseString.replace(/\r/g, '').split('\n')
 
   parsedStatusLine = parseStatusLine lines.shift()
   response['protocolVersion'] = parsedStatusLine['protocol']
