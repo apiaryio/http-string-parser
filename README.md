@@ -6,7 +6,7 @@
 
 Parse HTTP messages (Request and Response) from raw string in Node.JS
 
-##Parse HTTP Messages
+## Parse HTTP Messages
 ```javascript
 var parser = require('http-string-parser');
 
