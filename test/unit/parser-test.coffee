@@ -23,7 +23,7 @@ describe "parser module", () ->
       before () ->
         output = parser.parseHeaders headerLines
 
-      describe "its retrun", () ->
+      describe "its return", () ->
         it "should be object", () ->
           assert.isObject output
 
