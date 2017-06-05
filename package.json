@@ -1,6 +1,6 @@
 {
   "name": "http-string-parser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Parse HTTP Request and Response from String",
   "main": "lib/parser.js",
   "scripts": {
@@ -11,8 +11,7 @@
     "type": "git",
     "url": "https://github.com/apiaryio/http-string-parser"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "coffee-script": "1.6.3",
     "mocha": "1.11.0",
