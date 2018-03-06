@@ -1,5 +1,7 @@
 # http-string-parser
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/apiaryio/http-string-parser.svg)](https://greenkeeper.io/)
+
 [![NPM Version](https://img.shields.io/npm/v/http-string-parser.svg)](https://www.npmjs.com/package/http-string-parser)
 [![Build Status](https://travis-ci.org/apiaryio/http-string-parser.svg)](https://travis-ci.org/apiaryio/http-string-parser)
 [![Dependency Status](https://david-dm.org/apiaryio/http-string-parser.svg)](https://david-dm.org/apiaryio/http-string-parser)
