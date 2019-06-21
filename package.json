@@ -14,7 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "coffee-script": "1.6.3",
-    "mocha": "1.11.0",
+    "mocha": "6.1.4",
     "chai": "1.7.1",
     "curl-trace-parser": ""
   },
