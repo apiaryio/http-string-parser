@@ -18,6 +18,9 @@
     "chai": "1.7.1",
     "curl-trace-parser": ""
   },
+  "engines": {
+    "node": ">=8"
+  },
   "keywords": [
     "http",
     "message",
